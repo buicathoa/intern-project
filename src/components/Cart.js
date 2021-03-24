@@ -3,6 +3,9 @@ import CartItem from './CartItem';
 import { connect } from 'react-redux';
 import { actDelete, actUpdate } from '../actions';
 class Cart extends Component {
+  constructor(props) {
+    super(props);
+}
   cartQuantity = (Carts) => {
   if(Carts.length>0){
     for(var i = 0 ; i < Carts.length; i++){
