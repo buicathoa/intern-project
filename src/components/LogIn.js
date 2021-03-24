@@ -45,7 +45,7 @@ class LogIn extends Component {
         return (
             <div className="ve">
                 <div className="introduce">
-                <h2> Welcome to the world of Inspiring</h2>
+                <h2> Chào mừng bạn tham gia gia đình của Cát Hòa's mobile !!</h2>
                 </div>
                 {elmRegister}
             </div>

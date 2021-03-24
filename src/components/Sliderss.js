@@ -53,6 +53,11 @@ class Sliderss extends Component {
   onNext() {
     this.props.actChangeImages()
   }
+  componentDidMount(){
+     setInterval(()=>{
+       this.onNext();
+     },2000) ;
+  }
   onBack() {
     this.props.actBackImages()
   }

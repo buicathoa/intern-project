@@ -1,12 +1,44 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actNextSlide, actBackSlide } from './../actions/index'
+import { actNextSlide, actBackSlide } from './../actions/index';
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
+import FlashSaleItem from './FlashSaleItem';
 class Flashsale extends Component {
   constructor(props) {
     super(props)
     this.state = {
       second: 500
     }
+  }
+  chuyendoiURL = (str) => {
+    str = str.toLowerCase();
+
+    // xóa dấu
+    str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, 'a');
+    str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, 'e');
+    str = str.replace(/(ì|í|ị|ỉ|ĩ)/g, 'i');
+    str = str.replace(/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/g, 'o');
+    str = str.replace(/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/g, 'u');
+    str = str.replace(/(ỳ|ý|ỵ|ỷ|ỹ)/g, 'y');
+    str = str.replace(/(đ)/g, 'd');
+
+    // Xóa ký tự đặc biệt
+    str = str.replace(/([^0-9a-z-\s])/g, '');
+
+    // Xóa khoảng trắng thay bằng ký tự -
+    str = str.replace(/(\s+)/g, '-');
+
+    // xóa phần dự - ở đầu
+    str = str.replace(/^-+/g, '');
+
+    // xóa phần dư - ở cuối
+    str = str.replace(/-+$/g, '');
+
+    // return
+    return str;
   }
 
   componentDidMount() {
@@ -71,7 +103,7 @@ class Flashsale extends Component {
 
   render() {
 
-    let { slideDeals, startSlide,endSlide } = this.props;
+    let { slideDeals, startSlide, endSlide } = this.props;
     const { hour, minute, second } = this.secondToTime(this.state.second);
     return (
       <div id="deals">
@@ -84,11 +116,11 @@ class Flashsale extends Component {
         </div>
         <div id="sale-off" className="centre">
           <div id="trolai" onClick={() => this.onHandleBack()}>
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="backward" className="svg-inline--fa fa-backward fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"  id="backing" /></svg>
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="backward" className="svg-inline--fa fa-backward fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z" id="backing" /></svg>
           </div>
           {this.showFlashsale(slideDeals, startSlide, endSlide)}
           <div id="tieptheo" onClick={() => this.onHandleNext()}>
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="forward" className="svg-inline--fa fa-forward fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-6 c-1256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"  /></svg>
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="forward" className="svg-inline--fa fa-forward fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-6 c-1256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z" /></svg>
           </div>
         </div>
       </div>
@@ -98,10 +130,8 @@ class Flashsale extends Component {
 
 
   showFlashsale = (slideDeals, startSlide, endSlide) => slideDeals.map((slide, index) => (
-    <div key={index} className="deal-soc" style={{ display:  slide.id >= startSlide && slide.id <= endSlide ? 'block' : 'none' }}>
-      <img src={slide.image} />
-      <p className="old-price"> {slide.oldPrice}$ </p>
-      <p className="sale-price"> {slide.salePrice}$ </p>
+    <div key={index} className="deal-soc" style={{ display: slide.id >= startSlide && slide.id <= endSlide ? 'block' : 'none' }}>
+      <FlashSaleItem slide={slide}/>
     </div>
   ))
   onHandleNext() {

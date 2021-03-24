@@ -22,8 +22,8 @@ class CustomerCare extends Component {
         return (
             <div className="ve">
                 <div className="introduce">
-                    <h2> Joseph Hoa </h2>
-                    <h3> Welcome to our customer's care </h3>
+                    <h2> Chào mừng bạn tham gia gia đình của Cát Hòa's mobile !! </h2>
+                    <h3> Đây là trang thông tin hỗ trợ khách hàng </h3>
                 </div>
                 <div className="dangnhap">
                     <form onSubmit={this.onSubmit} className="login">

@@ -3,7 +3,7 @@ var images = [
     {
         slider: {
             id: 0,
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQorlPvyjb1Y6M8rX-L0UKCy10Kf-b-xNrOYQ&usqp=CAU',
+            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/thanh-toan-vnpay-br-giam-den-100k-1003516.jpg?v=1616384342',
             selector: 0
         },
         index: 0
@@ -11,7 +11,7 @@ var images = [
     {
         slider: {
             id: 1,
-            image: 'https://i.pinimg.com/originals/c5/32/68/c5326891ff40b9bea48820989b213d1b.jpg',
+            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/ra-mat-samsung-a52-a72-1003541.webp?v=1616471822',
             selector: 1,
         },
         index: 1
@@ -19,7 +19,7 @@ var images = [
     {
         slider: {
             id: 2,
-            image: 'https://i.pinimg.com/originals/dd/3b/31/dd3b316d542829af79aa3134ccae27a6.jpg',
+            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/hotsale-note-20-series-br-chi-tu-15-249-000d-1001764.jpg?v=1616385242',
             selector: 2
         },
         index: 2
@@ -27,7 +27,7 @@ var images = [
     {
         slider: {
             id: 3,
-            image: 'https://i.pinimg.com/originals/2a/f6/05/2af605467639e7d4496f28d84fd68a49.jpg',
+            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/oppo-reno5-br-chi-con-7-379-000d-1003571.jpg?v=1616385482',
             selector: 3
         },
         index: 3
@@ -35,7 +35,7 @@ var images = [
     {
         slider: {
             id: 4,
-            image: 'https://i.pinimg.com/originals/23/05/35/230535d2013c6b8f34e2304d050df22f.jpg',
+            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/s21-series-chinh-hang-br-hnam-giam-30-1001765.jpg?v=1616385603',
             selector: 4
         },
         index: 4

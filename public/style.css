@@ -71,22 +71,30 @@
 	display:none;
 	animation: fadeIn linear 0.2s;
 }
+
 #service{
 	width: 77%;
 	margin-left:38px;
 	height:30%
 }
+.deal-soc img:hover{
+	width: 100%;
+	animation: fadeIn linear 0.5s;
+	background-color: rgba(218, 209, 209, 0.3);
+}
 .login{
-	width: 45%;
+	width: 82%;
     height: 70%;
-    margin-top: 10%;
+    margin-top: 6%;
     border: 5px solid black;
     position: absolute;
-    top: -5%;
-    left: 38%;
-	background-color:white;
-	box-shadow: 5px 10px;
-	animation:fadeIn linear 1s;
+    top: 8%;
+    left: 6%;
+    background-color: white;
+    box-shadow: 5px 10px;
+    animation: fadeIn linear 1s;
+
+
 }
 .login p {
 	font-size:25px;
@@ -103,11 +111,12 @@
 	box-shadow: 5px 10px;
 	animation:fadeIn linear 1s;
 	padding-left:30px;
+	position: relative;
 }
-.register {
+.registerr {
 	position: absolute;
 	bottom:30px;
-	left:50px;
+	left:90px;
 	color:white;
 	background-color:steelblue;
 	font-weight: bold;
@@ -150,6 +159,7 @@ label{
 }
 .wrapper{
 	position: relative;
+	background-color: antiquewhite;
 }
 .list-item ul li:hover >.sub-menu{
 	display: block;
@@ -251,7 +261,7 @@ label{
 	color:white;
 }
 #menu-top{
-	background-color: #bc000b;
+	background-color: orange;
 	height: 48px;
 	width: 100%;
 }
@@ -389,7 +399,7 @@ label{
 #menu-bot{
 	width: 100%;
 	height: 69px;
-	background-color: #e5101d;
+	background-color: orangered;
 	position: relative;
 }
 #botmenu{
@@ -401,12 +411,16 @@ label{
 }
 #logo{
 	margin-right:10px;
+	margin-top: -13px;
 }
 #navbar{
 	margin-right:25px;	
 }	
 #loop{
 	margin-right:80px;
+}
+#loop button:hover{
+	background-color: orangered;
 }
 #shoppingcart{
 	margin-right:55px;
@@ -428,6 +442,7 @@ label{
 	height: 69px;
 	font-style: italic;
 	line-height: 69px;
+	
 }
 .w3-white{
 	border:2px solid white;
@@ -471,8 +486,7 @@ label{
 #slider > img{
 	width: 100%;
 	height:300px;
-	animation:fadeIn linear 1s;
-	display: none;
+	animation:animation: fadeIn linear 2s;
 }
 .renderButton { 
 	display: inline-block;
@@ -502,12 +516,15 @@ label{
 background-color:green;
 }
 #slider{
-	position: relative;
 	z-index: 1;
-	margin-top: 117px;
-	display: flex;
-	position: relative;
+    margin-top: 117px;
+    display: flex;
+    position: relative;
+    width: 85%;
+    margin: 121px auto;
+	border: 9px solid black;
 }
+
 #slider img{
 	width: 100%;
 	height:400px;
@@ -518,7 +535,7 @@ background-color:green;
 #toLeft{
 	width: 40px;
 	height: 40px;
-	color:white;
+	color:black;
 	position: absolute;
 	left:50px;
 	top:50%;
@@ -555,8 +572,9 @@ background-color:green;
 	text-decoration: none;
 }
 #convenient{
-	margin:10px auto;
-	width: 85%;
+	margin: 0 auto;
+    width: 85%;
+    height: 139px;
 }
 .sale-price{
 	color:red;
@@ -638,10 +656,21 @@ background-color:green;
 	display: flex;
 	justify-content: space-between;
 }
+.widest h2{
+	margin-left: 129px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: orangered;
+    color: white;
+    width: 84%;
+	padding-left:30px;
+}
 #center{
 	width: 85%;
 	margin:0 auto;
-	background-color: cyan;
+	background-color: antiquewhite;
 }
 #flash-sale{
 	position: absolute;
@@ -732,10 +761,10 @@ background-color:green;
 	margin-top:35px;
 }
 .deal-soc img{
-	width: 100%;
-	height: 200px;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
+	width: 70%;
+    height: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 #sale-off{
 	display: flex;
@@ -754,14 +783,28 @@ background-color:green;
 	cursor: pointer;
 	position: relative;
 }
+
+.item img:hover{
+	width: 100%;
+	margin-left:3px;
+}
+.item:hover > #addToCart{
+	display: block;
+	z-index: 50;
+}
+.item:hover{
+	animation: fadeIn linear 0.5s;
+	background-color: rgba(218, 209, 209, 0.3);
+}
 .wider{
 	background-color:silver;
 }
 .item img{
-	width: 100%;
+	width: 80%;
 	padding-left:5px;
 	padding-top:5px;
 	border:0.5px solid silver;
+	margin-left: 25px;
 }
 .item > p {
 	padding-left:15px;
@@ -821,21 +864,24 @@ background-color:green;
 	display: flex;
     position: absolute;
     left: 0;
-    bottom: -212px;
+    bottom: -191px;
 	justify-content: center;
 	width: 100%;
 	height: 283px;
-	background-image:linear-gradient(green,red)
+	background-color:antiquewhite;
 }
 .item1{
-	border:10px solid black;
-	width: 9.09%;	
-	height:375px;
-	background-color:rgb(221, 61, 61)
+	border: 1px solid black;
+    width: 11.66%;
+    height: 279px;
+    background-color: white;
+}
+.item1 img{
+	width: 100%;
 }
 .item1 p{
 	text-align: center;
-	color:white;
+	color:black;
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -843,8 +889,10 @@ background-color:green;
 	width: 114px;
     height: 208px;
     margin: 0 auto;
-    padding-left: 0px;
+    margin-left: 38px;
+
 }
+
 .ve h1{
 	position: absolute;
     bottom:50px;
@@ -852,8 +900,7 @@ background-color:green;
 	font-weight: bold;
 	color:rgb(31, 0, 209);
 	width:100%;
-	background-color: yellow; 
-    bottom: 65px;
+	display:none;
 }
 
 #footer{
@@ -881,7 +928,7 @@ background-color:green;
 	background-repeat: no-repeat;
 	width: 100%;
 	overflow: scroll;
-	background-image:url('https://croatia.hr/sites/default/files/styles/image_full_width/public/2020-01/Plitvice-Lakes-National-Park_shutterstock_454592293_1600x900.jpg?itok=xwQuMGjg')	
+	background-color:antiquewhite;
 }
 .introduce h1,h3{
 	color:black;
@@ -891,6 +938,16 @@ background-color:green;
 .introduce{
 	flex-grow: 2;
 	height:100%;
+	position: relative;
+}
+.introduce h2{
+	top: 30%;
+    left: 30%;
+    POSITION: ABSOLUTE;
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
 }
 .dangnhap{
 	flex-grow: 3;
@@ -970,10 +1027,13 @@ background-color:green;
     color: white;
     font-weight: bold;
 	cursor: pointer;
-
+}
+.morong:hover{
+	background-color:black;
 }
 #cart-item tr td{
 	text-align: center;
+
 }
 #xoa{
 	width: 55px;
@@ -1009,11 +1069,12 @@ background-color:green;
 }
 table, th, td {
 	border: 1px solid black;
+	background-color: white;
   }
 #detail{
 	width: 400px;
 	height:550px;
-	background-color:rgb(167, 157, 157);
+	background-color:white;
     border: 3px solid black;
 	box-shadow: 3px 6px;
 	margin-top:20px;
@@ -1050,8 +1111,8 @@ table, th, td {
 	background-color: rgb(243, 6, 6);
 }
 #icon h2{
-	color:rgb(204, 4, 4);
-	font-weight: bold;
+	color: black;
+    font-weight: bold;
 }
 #icon p{
 	font-weight: bold;
@@ -1086,9 +1147,11 @@ table, th, td {
 	position: absolute;
     top: 0px;
     left: 32%;
+    color: black;
+
 }
 .chitiet1{
-	background-color: rgb(41, 155, 130);
+	background-color: antiquewhite;
     width: 100%;
     height: 235px;
     position: relative;
@@ -1113,18 +1176,35 @@ table, th, td {
 	padding-left:20px;
 	border:5px solid black
 }
-#addToCart{
-	justify-content: space-around;
-    border: 3px solid black;
-    background-color: darkblue;
+.item > #addToCart{
+	background-color: #ca4e4e;
     width: 44px;
     height: 41px;
     height: 3;
     border-radius: 50%;
     padding-left: 8px;
+    position: absolute;
+    right: 80px;
+    top: 75px;
+	display: none;
+}
+#addToCart:hover{
+	background-color:#ef3535;
+}
+#slider .Slider img{
+	animation: zoom 1s ease;
+}
+#soluong{
 	position: absolute;
-	right: 75px;
-    bottom: 13px;
+    top: -11px;
+    right: 148px;
+    color: black;
+    background: white;
+    border-radius: 19%;
+    font-size: 33px;
+    width: 21px;
+    height: 57px;
+
 }
 .pay{
 	color: white;
@@ -1324,6 +1404,7 @@ table, th, td {
    		text-align: center;
 		cursor: pointer;
 	}
+
 	.item img{
 		width: 50%;
 	}
@@ -1336,6 +1417,7 @@ table, th, td {
 	#searching{
 		width: 20%;
 	}
+	
 	#shoppingcart{
 		width: 9%;
 	}
@@ -1353,7 +1435,7 @@ table, th, td {
 @media only screen and (min-width: 1113px){
 	.item{
 		width: 106%;
-		height:440px;
+		height:360px;
 	}
 	#loop{
 		width: 100%;

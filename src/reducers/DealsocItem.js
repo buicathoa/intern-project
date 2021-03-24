@@ -1,65 +1,75 @@
 import * as Types from './../constants/actionType'
 var deals = [
     {
+        name:'samsung galaxy s21',
         id: 0,
         salePrice: 300,
         oldPrice: 600,
-        image: 'https://pbs.twimg.com/profile_images/699564144337428481/SFU6uebL.jpg'
+        image:'https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung-galaxy-s21-ultra-1_1_2.jpg',
     },
     {
+        name:'Oppo Reno 4',
         id: 1,
         salePrice: 320,
         oldPrice: 640,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Frank_Lampard_2017.jpg'
+        image:'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSZrrw3bnubj2CKCGdckfx40jM0xN0crFfwUVmHdpe-hCBRKS9SXlev4Df3U3FCSpukCy_sIGREncFnn34Cr8r6ZAjeM6VDHCPr&usqp=CAc',
     },
     {
+        name:'Real Me C3',
         id: 2,
         salePrice: 200,
         oldPrice: 100,
-        image: 'https://resources.premierleague.com/premierleague/photos/players/250x250/p1718.png'
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4dez7xGX_DuoSgoisydsdjm7-8xOBNlTcY-RrisNsxfWfF3-_mwERHv3pg_0&usqp=CAc',
     },
     {
+        name:'Apple iphone 12',
         id: 3,
         salePrice: 500,
         oldPrice: 620,
-        image: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Petr_%C4%8Cech_Chelsea_2013.jpg'
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQySU0jOIwoPCg_en0qbUaa-TjeXnEkO_00pcZcI93cXaA_uhHszO7MYF0w&usqp=CAc',
     },
     {
+        name:'Iphone 7',
         id: 4,
         salePrice: 200,
         oldPrice: 300,
-        image: 'https://i.guim.co.uk/img/media/32f0496452d5a235f5f200198a2b57a49ed020be/0_132_4549_2730/master/4549.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=8433acb438dfd59cde294c6dda931073'
+        image:'https://stcv4.hnammobile.com/uploads/products/colors/3/apple-iphone-7-plus-32gb--8896153998-jpg.jpg',
     },
     {
+        name:'Apple ipad air 4',
         id: 5,
         salePrice: 300,
         oldPrice: 600,
-        image: 'https://resources.premierleague.com/premierleague/photo/2019/05/01/3aedde58-0df0-4723-81bb-3ae34d2b876f/azpilicueta.jpg'
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSETwCALs3qIBk5nScyDRQCyx0dblbL10DOtb9xQcGW_hFrmKxXg0sbqIcCGw&usqp=CAc',
     },
     {
+        name:'Airpod',
         id: 6,
         salePrice: 320,
         oldPrice: 630,
-        image: 'https://static.dw.com/image/4056537_4.jpg'
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYmLX06VE3HXM-KaSX8VjSymZQqhzeR4JXX0X3pXosfkgVOv3ssvO32kyF0C0AbxxdDrVBJ4M&usqp=CAc',
     },
     {
+        name:'Bàn phím magic keyboard',
         id: 7,
         salePrice: 100,
         oldPrice: 550,
-        image: 'https://i.guim.co.uk/img/media/c95dbaec970bd5af132f7432f5b71cc7fcc029f4/408_120_2682_1609/master/2682.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ef2d65b55dc47662e5cab07c9e1b8bdf'
+        image:'https://www.duchuymobile.com/images/thumbnails/180/180/detailed/40/trang.jpg',
     },
     {
+        name:'Apple iphone 8',
         id: 8,
         salePrice: 300,
         oldPrice: 600,
-        image: 'https://i.guim.co.uk/img/media/3033e6c46eaa3a28fb7b1d7bcf743925f3806eed/0_226_4039_2424/master/4039.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=06a84daff02bc83857ce6a9b2c617f4e'
+        image:'https://stcv4.hnammobile.com/uploads/products/colors/3/apple-iphone-8-plus-128gb-01572325075.jpg',
     }
     ,
     {
+        name:'Black berry 3',
         id: 9,
         salePrice: 1300,
         oldPrice: 1600,
-        image: 'https://acefootball.com/wp-content/uploads/2020/09/GettyImages-1273763723.jpg'
+        image:'https://sudospaces.com/thegioiblackberry-com-vn/2019/07/blackberry-key-3-1.jpg',
     }
 ];
 const initialState = {

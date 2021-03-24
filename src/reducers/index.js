@@ -11,6 +11,6 @@ const appReducers = combineReducers({
     sliders,
     Dealsoc,
     feedback,
-    Carts
+    Carts,
 });
 export default appReducers;

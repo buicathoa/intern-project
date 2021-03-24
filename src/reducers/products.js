@@ -2,25 +2,25 @@ import * as Types from './../constants/actionType';
 var initialState = [
     {
         id : 1,
-        name: 'Iphone 4 like new 99%',
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-nGMmHqrZthkugFyOPy4u57HGjXdxQl9rZ8iMtVs6VX-N1BmMWLzqDqB-Su1nt66J0jfwmGwT&usqp=CAc',
-        description: 'Oldest Item in Apple',
-        rating : 3,
-        salePrice:300,
-        oldPrice:600,
+        name: 'Samsung Galaxy s21 Ultra',
+        image:'https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung-galaxy-s21-ultra-1_1_2.jpg',
+        description: 'Product of Korea',
+        rating:4,
+        salePrice:33,
+        oldPrice:35,
         moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'iPhone 4 là một bước tiến mới của Apple trong công nghệ màn hình. ... Với kích cỡ màn hình 3,5inch, cùng độ phân giải 960 x 640, mật độ điểm ảnh lên tới 326 ppi, màn hình iPhone 4 cho hình ảnh hiển thị sắc nét và mịn màng đến mức người dùng sẽ không thể cảm nhận được sự hiện diện của các điểm ảnh trên màn hình.'
+        content:'[HOT] Dùng thử S21 series - 14 ngày miễn phí đổi trả Thu cũ đổi mới lên đời S21 - Trợ giá tới 5 triệu đồng (có điều kiện kèm theo).'
     },
     {
         id : 2,
-        name: 'Iphone 5 like new 99%',
-        image:'https://fptshop.com.vn/content/images/uploaded/phone%20img/apple/apple-iphone-5s-ofic1.jpg',
-        description:'Product of Apple', 
-        rating:4,
-        salePrice:330,
-        oldPrice:400,
+        name: 'Oppo Reno 4',
+        image:'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSZrrw3bnubj2CKCGdckfx40jM0xN0crFfwUVmHdpe-hCBRKS9SXlev4Df3U3FCSpukCy_sIGREncFnn34Cr8r6ZAjeM6VDHCPr&usqp=CAc',
+        description: 'Product of China',
+        rating:3,
+        salePrice:33,
+        oldPrice:35,
         moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'iPhone 5s 16GB được trang bị màn hình 4.0 inch với độ phân giải cao. Máy chạy ... 5S sở hữu camera 8 MP với đèn led flash kép. ...'
+        content:'Thiết kế mới, hiện đại và ấn tượng. Đầu tiên, OPPO Reno 4 có sự nâng cấp toàn diện so với người anh em Reno3, khi sử dụng chất liệu nhôm nguyên khối '
     },
     {
         id : 3,
@@ -70,70 +70,140 @@ var initialState = [
     },
     {
         id : 7,
-        name: 'Iphone 12 like new 99%',
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlVpMvxOYmLrHoXKfL3lSf5bEooC3PY5R5OfcCgE6k4eGuAUaJWpz4ZWXaKHW8Z8m9nMDiZI0D&usqp=CAc',
-        description: 'Product of USA',
-        rating:5,
-        salePrice:1000,
-        oldPrice:1102,
-        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'Màn hình 6.1 inch, 1.170 x 2.532 pixels, tấm nền Super Retina XDR OLED. CPU: Apple A14 Bionic. RAM: 4 GB. Bộ nhớ trong: 128 GB'
-    },
-    {
-        id : 8,
-        name: 'Samsung s20 Ultra like new 99%',
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThxlgjqb67rqU-rJjOTyVBdvzfK0on1fV1Kxc9X_N0mM3k4asLpZSVjSCfzKxpGsFXMvj6eo0&usqp=CAc',
-        description: 'Product of Korea',
-        rating:5,
-        salePrice:800,
-        oldPrice:820,
-        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'Galaxy S20+. Đen Vô Cực; Xám Vô Cực; Xanh Khí Chất. Galaxy S20 Ultra. Đen Vô Cực; Xám Vô Cực; Trắng Cloud White. XEM GALAXY S20 RẤT CHI TIẾT.'
-    },
-    {
-        id : 9,
-        name: 'Macbook pro 4 like new 99%',
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhVK0NiFeNNl8t1DmdFj3y9SSWFbGMtvbT4nOCJOCEyEvIYymHhScZtVFI7BNy1VMiZgYBAUat&usqp=CAc',
-        description: 'Product of Apple',
-        rating:5,
-        salePrice:2000,
-        oldPrice:2200,
-        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'1'
-    },
-    {
-        id : 10,
-        name: 'Tablet 7 like new 99%',
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXAe-r-ZhzUO8-Y00LYPjfBThurw7a0T8ajHviVfo-bIfAHhIsRPJgk02zC_KdfC9aT9OSbPQ&usqp=CAc',
-        description: 'Product of Apple',
-        rating:5,
-        salePrice:600,
-        oldPrice:619,
-        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'Với MacBook Pro 13 inch 2020, Apple phát hành hai phiên bản khác nhau không chỉ về số lượng cổng Thunderbolt mà còn khác cả về dòng ...'
-    },
-    {
-        id : 11,
-        name: 'Nokia 5 like new 99%',
-        image:'data:image/jpeg;base64,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',
-        description: 'Product of Japan',
+        name: 'Apple iPhone 12 Mini 64GB VN/A',
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQySU0jOIwoPCg_en0qbUaa-TjeXnEkO_00pcZcI93cXaA_uhHszO7MYF0w&usqp=CAc',
+        description: 'Product of US',
         rating:4,
-        salePrice:30,
-        oldPrice:35,
-        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'Về cấu hình máy có màn hình 5.2 inch, RAM 2GB, bộ nhớ trong 16 GB, có thể mở rộng qua khe cắm thẻ nhớ microSD. Bên trong, Nokia 5 trang bị sẵn con chip Snapdragon 430 và cài Android 7.1.1 Nougat mới nhất. Nokia 5 được trang bị camera sau 13MP, camera trước 8MP góc rộng có thể chụp ảnh selfie rộng hơn.'
-    },
-    {
-        id : 12,
-        name: 'Oppo 3 like new 99%',
-        image:'https://cf.shopee.vn/file/731f53a366e429318c9b95ad84664450',
-        description: 'Product of China',
-        rating:3,
         salePrice:33,
         oldPrice:35,
         moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
-        content:'Màn hình: 6.52", HD+Chip: MediaTek Helio P35 8 nhânRAM: 3 GB, Bộ nhớ trong: 32 GBCamera sau: Chính 13 ... Xem thêm cấu hình chi tiết.'
-    }
+        content:'Trong tất cả các dòng iPhone 12 Series ra mắt thì iPhone 12 Mini là chiếc có giá thấp nhất cũng là chiếc iPhone nhỏ nhất. Vậy chiếc iPhone 12 Mini có gì nổi bật so với những phiên bản khác.'
+    },
+    {
+        id : 8,
+        name: 'Iphone 7',
+        image:'https://stcv4.hnammobile.com/uploads/products/colors/3/apple-iphone-7-plus-32gb--8896153998-jpg.jpg',
+        description: 'Product of US',
+        rating:5,
+        salePrice:33,
+        oldPrice:35,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content:'​iPhone 7 Plus là 1 phiên bản được đánh giá có sự thay đổi lớn nhất của Apple về camera, lần này Apple đã mang đến cho người dùng 1 sự trải nghiệm tính năng chụp ảnh không thua kém các máy chụp ảnh chuyên nghiệp. Hiện tại đang có 4 màu cho phiên bản 32Gb gồm: Silver, Gold,Rose Gold, Matte Black'
+    },
+    {
+        id : 9,
+        name: 'Apple iPhone 8 Plus 128Gb',
+        image:'https://stcv4.hnammobile.com/uploads/products/colors/3/apple-iphone-8-plus-128gb-01572325075.jpg',
+        description: 'Product of US',
+        rating:3,
+        salePrice:400,
+        oldPrice:440,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content:'iPhone 8 và iPhone 8 Plus là bộ đôi được Apple ra mắt vào tháng 9 vừa qua với thiết kế không có nhiều thay đổi so với thế hệ trước. Tuy nhiên vẫn có nhiều điểm và tính năng được nâng cấp trên 2 thiết bị này.'
+    },
+    {
+        id : 10,
+        name: 'Apple iPad Pro 12.9 Cellular 256 GB 2020',
+        image:'https://stcv4.hnammobile.com/uploads/products/colors/4/apple-ipad-pro-12-9-cellular-256-gb-2020-01592964456.jpg',
+        description: 'Product of US',
+        rating:5,
+        salePrice:1500,
+        oldPrice:1700,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content: 'Apple vừa mới nâng cấp chiếc iPad Pro 2020 với những cải tiến vượt bậc cùng với đó là phụ kiện bàn phím Magic Keyboard mới giúp cho chiếc iPad giờ đây đã có thể thay thế công việc của một chiếc laptop cồng kềnh.'
+
+    },
+    {
+        id : 11,
+        name: 'Apple iPad Air 4 10.9 Cellular 64GB 2020',
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSETwCALs3qIBk5nScyDRQCyx0dblbL10DOtb9xQcGW_hFrmKxXg0sbqIcCGw&usqp=CAc',
+        description: 'Product of US',
+        rating:2,
+        salePrice:1200,
+        oldPrice:1300,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content: 'Apple A14 Bionic 6 nhân, Đang cập nhật'
+
+    },
+    {
+        id : 12,
+        name: 'MacBook Air 13 inch Late 2020 512GB',
+        image:'https://stcv4.hnammobile.com/uploads/products/colors/4/macbook-air-13-inch-late-2020-512gb-gold-mgne3-chip-m1-01614940324.jpg',
+        description: 'Product of UK',
+        rating:5,
+        salePrice:1500,
+        oldPrice:1900,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content: 'MacBook Air 13 2020 vẫn sở hữu thiết kế siêu mỏng và cao cấp như thế hệ tiền nhiệm với chất liệu hợp kim nhôm chắc chắn và cực kì bền bỉ. Máy có kích thước khá nhỏ gọn 30,41x 21,24x 1,61 cm và trọng lượng nặng chỉ 1.29 kg cực kì nhẹ. Bạn có thể dễ dàng mang theo chiếc MacBook Air 2020 bất kỳ đâu và mọi lúc cần. '
+    },
+    {
+        id : 13,
+        name: 'Tai nghe Apple AirPods Pro Chính Hãng',
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYmLX06VE3HXM-KaSX8VjSymZQqhzeR4JXX0X3pXosfkgVOv3ssvO32kyF0C0AbxxdDrVBJ4M&usqp=CAc',
+        description: 'Product of UK',
+        rating:3,
+        salePrice:500,
+        oldPrice:529,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content: 'AirPods Pro là sản phẩm được nâng cấp đáng kể so với các sản phẩm tiền nhiệm, đặc biệt là khả năng chống ồn hiệu quả đang được nhiều người dùng thích thú.'
+    },
+    {
+        id : 14,
+        name: 'Apple Watch Series 6 40mm (GPS + 4G) Viền Nhôm',
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvo-he9lijDhKnex9awRrNZ_Z-qDWGJAf4ZiG7SSk5PnSzb21a947m78k0In4m0b1jAqzldiI&usqp=CAc',
+        description: 'Product of US',
+        rating:4,
+        salePrice:33,
+        oldPrice:35,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content:'Đánh giá Apple Watch Series 6 40mm (GPS + 4G) Viền Nhôm Dây Cao Su Chính Hãng VN/A'
+    
+    },
+    {
+        id : 15,
+        name: 'Bàn Phím Magic Keyboard Cho iPad Pro ',
+        image:'https://www.duchuymobile.com/images/thumbnails/180/180/detailed/40/trang.jpg',
+        description: 'Product of US',
+        rating:5,
+        salePrice:33,
+        oldPrice:35,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content:'Đánh giá Bàn Phím Magic Keyboard Cho iPad Pro 11 inch (Gen 2) - International English'
+    },
+    {
+        id : 16,
+        name: 'Smart Keyboard Folio iPad',
+        image:'https://www.duchuymobile.com/images/thumbnails/480/480/detailed/32/den.jpg',
+        description: 'Product of US',
+        rating:3,
+        salePrice:400,
+        oldPrice:440,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content:'Đánh giá Smart Keyboard Folio iPad'
+    },
+    {
+        id : 17,
+        name: 'Tai nghe AirPods Max Chính Hãng',
+        image:'https://www.duchuymobile.com/images/thumbnails/480/480/detailed/38/hong.jpg',
+        description: 'Product of US',
+        rating:5,
+        salePrice:1500,
+        oldPrice:1700,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content: 'Đánh giá Tai nghe AirPods Max Chính Hãng Apple'
+
+    },
+    {
+        id : 18,
+        name: 'Apple Watch SE 44mm (4G) Viền Nhôm',
+        image:'https://www.duchuymobile.com/images/thumbnails/480/480/variant_image/39/do_ivyq-j4.jpg',
+        description: 'Product of US',
+        rating:2,
+        salePrice:1200,
+        oldPrice:1300,
+        moreInfo:'Miễn phí vận chuyển Miễn phí vận chuyển tới 20.000d',
+        content: 'Đánh giá Apple Watch SE 44mm (4G) Viền Nhôm - Dây Vải Chính Hãng VN/A'
+    },
 ];
 const products = (state = initialState , action)=>{
     switch(action.type){

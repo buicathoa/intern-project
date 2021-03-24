@@ -13,6 +13,26 @@ class DetailItem extends Component {
     onAddToCart(){
         alert('Them gio hang thanh cong')
     }
+    onDetail = () => {
+        this.setState({
+            isDisplay: true
+        })
+    }
+    onMind = () => {
+        this.setState({
+            isDisplay: false
+        })
+    }
+    showRating(rating) {
+        var result = [];
+        for (var i = 0; i < rating; i++) {
+            result.push(<i className="fa fa-star"></i>)
+        }
+        for (var j = 0; j < 5 - rating; j++) {
+            result.push(<i className="fa fa-star-o"></i>)
+        }
+        return result;
+    }
     render() {
         var dem = 0;
         var { match, products, feedbacks, displayId } = this.props;
@@ -80,7 +100,7 @@ class DetailItem extends Component {
                                 {
                                     products.map((product, index) => {
                                         if (product.id != this.props.match.params.id) {
-                                            if (dem <= 10) {
+                                            if (dem <= 5) {
                                                 dem++;
                                                 return (
                                                     <ItemRelated name={product.name} anh={product.image} product={product} tinId={product.id} />
@@ -96,28 +116,7 @@ class DetailItem extends Component {
             })
         )
     }
-
-
-    onDetail = () => {
-        this.setState({
-            isDisplay: true
-        })
-    }
-    onMind = () => {
-        this.setState({
-            isDisplay: false
-        })
-    }
-    showRating(rating) {
-        var result = [];
-        for (var i = 0; i < rating; i++) {
-            result.push(<i className="fa fa-star"></i>)
-        }
-        for (var j = 0; j < 5 - rating; j++) {
-            result.push(<i className="fa fa-star-o"></i>)
-        }
-        return result;
-    }
+   
 }
 const mapStateToProps = state => {
     const { products } = state
