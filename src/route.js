@@ -2,8 +2,8 @@ import Home from './components/home';
 import react from 'react';
 import LogIn from './components/LogIn';
 import DetailItem from './components/DetailItem';
-import CustomerCare from './components/CustomerCare';
 import Cart from './components/Cart';
+import Config from './components/config';
 const routes = [
     {
         path:'/',
@@ -16,11 +16,6 @@ const routes = [
         exact:false
     },
     {
-        path:'/care',
-        main : () => <CustomerCare/>,
-        exact:false
-    },
-    {
         path:'/login',
         main : () => <LogIn/>,
         exact:false
@@ -28,6 +23,11 @@ const routes = [
     {
         path:'/cart',
         main : () => <Cart/>,
+        exact:false
+    },
+    {
+        path:'/config',
+        main : () => <Config/>,
         exact:false
     },
 ]

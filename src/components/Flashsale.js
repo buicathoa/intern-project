@@ -10,7 +10,7 @@ class Flashsale extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      second: 500
+      second: 600
     }
   }
   chuyendoiURL = (str) => {

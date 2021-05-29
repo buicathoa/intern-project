@@ -3,13 +3,13 @@ class App extends Component {
   render() {
     var { cart } = this.props;
     return (
-      <tr class="rowing">
+      <tr className="rowing">
         <td ><img src={cart.product.image} />
         </td>
         <td >{cart.product.name}</td>
         <td >{cart.product.salePrice}$</td>
-        <td ><span>{cart.quantity}</span><button class="morong" onClick={()=>this.onUpdateQuantity(cart.product,cart.quantity +1 )}>+</button>
-        <button onClick={()=>this.onUpdateQuantity(cart.product,cart.quantity -1 )} class="morong">-</button>  </td>
+        <td ><span>{cart.quantity}</span><button className="morong" onClick={()=>this.onUpdateQuantity(cart.product,cart.quantity +1 )}>+</button>
+        <button onClick={()=>this.onUpdateQuantity(cart.product,cart.quantity -1 )} className="morong">-</button>  </td>
         <td > {this.sumItem(cart.product.salePrice, cart.quantity)}$ </td>
         <button id="xoa" onClick={() => this.onDelete(cart.product)}>X</button>
       </tr>
@@ -17,8 +17,14 @@ class App extends Component {
   }
   onDelete = (product) => {
     var { onDeletee } = this.props;
-    alert('Delete item success !')
-    onDeletee(product)
+
+     var x = window.confirm("Xóa khỏi giỏ hàng?");
+      if (x){onDeletee(product)}
+          
+      else{return false;}
+        
+
+    
   }
 
   onUpdateQuantity=(product,quantity)=>{

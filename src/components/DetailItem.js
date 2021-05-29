@@ -39,7 +39,7 @@ class DetailItem extends Component {
         var { isDisplay } = this.state
         var elmBuy = isDisplay ? 
         <div id="pay0">
-            <button id="pay2" onClick={()=>this.onAddToCart()}><Link to="/cart"> Add to cart</Link></button>
+            <button id="pay2" onClick={()=>this.onAddToCart()}><Link to="/cart" style={{color:'white'}}> Add to cart</Link></button>
         </div> : ''
         var elmButton = isDisplay ?
             <ul>
@@ -53,14 +53,13 @@ class DetailItem extends Component {
         var elmDetail = isDisplay ? products.map((product, index) => {
             if (product.id == this.props.match.params.id) {
                 return (
-                    <div id="chitiet1">
+                    <div id="chitiet1" style={{height:'229px'}}>
                         {product.content}
                     </div>
                 )
             }
-        }) : <div className="chitiet1">
-            <h2>Please Let us knows what things made you disapointed ?</h2>
-            <textarea placeholder="Tell me how"></textarea>
+        }) : <div style={{height:'229px'}} className="chitiet1">
+            <textarea style={{height:'229px', width:'100%',marginLeft:0}}placeholder="Tell me how"></textarea>
             <button id="send"> Send </button>
         </div>
 
@@ -75,19 +74,19 @@ class DetailItem extends Component {
                             </div>
                             <div id="icon">
                                 <div id="chitiet">
-                                    <h2>{product.name}</h2>
-                                    <p className="oldPrice"> {product.oldPrice} $</p>
-                                    <p className="salePrice">{product.salePrice} $</p>
+                                    <h2 style={{marginTop:50}}>{product.name}</h2>
+                                    <p  style={{marginTop:50}} className="oldPrice"> {product.oldPrice} $</p>
+                                    <p  style={{marginTop:50}}className="salePrice">{product.salePrice} $</p>
                                 </div>
-                                <div id="moreInfo">
-                                    <p>{product.moreInfo}</p>
+                                <div  style={{marginTop:50}} id="moreInfo">
+                                    <p style={{textAlign:'center'}}>{product.moreInfo}</p>
                                 </div>
-                                <ul id="rating">
+                                <ul  style={{marginTop:55}} id="rating">
                                     {this.showRating(product.rating)}
                                 </ul>
                                 {elmBuy}
-                                <div className="chitiet1">
-                                    <div className="rated">
+                                <div  style={{marginTop:50}} className="chitiet1">
+                                    <div style={{marginLeft:'-37px'}}className="rated">
                                         <ul>
                                             {elmButton}
                                         </ul>
@@ -95,22 +94,7 @@ class DetailItem extends Component {
                                     {elmDetail}
                                 </div>
                             </div>
-                            <h1> Related Item </h1>
-                            <div id="related">
-                                {
-                                    products.map((product, index) => {
-                                        if (product.id != this.props.match.params.id) {
-                                            if (dem <= 5) {
-                                                dem++;
-                                                return (
-                                                    <ItemRelated name={product.name} anh={product.image} product={product} tinId={product.id} />
-                                                )
-                                            }
-                                        }
-                                    })
-                                }
                             </div>
-                        </div>
                     )
                 }
             })

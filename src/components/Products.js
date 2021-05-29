@@ -6,19 +6,25 @@ class Products extends Component {
   render() {
     var { products, match } = this.props;
     return (
-      <div id="grid wide" class="widest">
+      <div id="grid wide" className="widest">
         <div id="content"> DÀNH RIÊNG CHO BẠN </div>
+        <div id="android">
         <h2> Điện thoại Android nổi bật </h2>
         <div id="center" className="row">
           {this.showProducts(products)}
         </div>
+        </div>
+        <div id="iphone">
         <h2> Điện thoại Iphone nổi bật </h2>
         <div id="center" className="row">
           {this.showIphone(products)}
         </div>
+        </div>
+        <div  id="phukien">
         <h2> Phụ kiện nổi bật </h2>
         <div id="center" className="row">
           {this.showPhuKien(products)}
+        </div>
         </div>
       </div>
     );

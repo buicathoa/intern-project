@@ -2,6 +2,7 @@ import React, { Component, Profiler } from 'react';
 import Menutop from './components/Menutop.js';
 import Menubot from './components/Menubot.js';
 import ChangeURL from './router/ChangeURL.js';
+import Footer from './components/Footer.js';
 import {
   BrowserRouter as Router,
   Switch,

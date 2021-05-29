@@ -1,55 +1,93 @@
 import React, { Component } from 'react';
-import SignUp from './signUp';
-
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 class LogIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
-            password: '',
-            isDisplay: true
+          username: '',
+          password:'',
         }
-    }
-    onChange(event) {
-        var target = event.target;
-        var name = target.name;
-        var value = target.value;
-        this.setState({
-            [name]: value
-        })
-    }
-    onSubmit(event) {
+      }
+    // handleLogin() {
+    //     axios({
+    //         method: 'post',
+    //         url: 'https://cusapi.rnt.vn/api/Account/SignIn',
+    //         data: {
+    //          UserName: this.state.username,
+    //          PassWord: this.state.password
+    //         }
+    //       }).then(res=>{
+    //             window.location.href("/");
+    //       }).catch(res=>{
+    //             console.log(res.message);
+    //       })
+    // }
+    handleEmailChange=(e)=> {
+        this.setState({username: e.target.value});
+     }
+     handlePasswordChange=(e)=> {
+        this.setState({password: e.target.value});
+     }
+     onHandleSubmit=(event)=>{
+        axios({
+                    method: 'post',
+                    url: 'https://cusapi.rnt.vn/api/Account/SignIn',
+                    data: {
+                     UserName: this.state.username,
+                     PassWord: this.state.password
+                    }
+                  }).then(res=>{
+                        if(res.data.isSuccess !== 0){
+                            console.log(res.data.data.userId)
+                            localStorage.setItem('userId', res.data.data.userId);
+                            localStorage.setItem('token', res.data.data.token)
+                            localStorage.setItem('userFullName', res.data.data.userFullName   )
+                            
+                             window.location.href = "/";
+                             console.log(res);                      
+                        }else{
+                            alert(res.data.message);
+                            this.setState({
+                                username:'',
+                                password:''
+                            })
+                        }
+                  })
         event.preventDefault();
-        console.log(this.state)
-    }
-    onCreate=()=>{
-        this.setState({
-            isDisplay : !this.state.isDisplay
-        })
-    }
+     }
     render() {
-        var {isDisplay}= this.state;
-        var elmRegister = isDisplay ? <div className="dangnhap">
-        <form onSubmit={this.onSubmit} className="login">
-      
-                <p> UserName </p>
-                <input type="text" name="username" placeholder="username" className="nhap" />
-                <br />
-                <p> Password </p>
-                <input type="password" name="password" className="nhap" placeholder="password" />
-  
-            <button className="action"><a href="/"> Next </a></button>
-            <button className="create" onClick={this.onCreate}> Create an account </button>
-        </form>                  
-    </div> : <SignUp/>
         return (
-            <div className="ve">
-                <div className="introduce">
-                <h2> Chào mừng bạn tham gia gia đình của Cát Hòa's mobile !!</h2>
+            <div className="global-container">
+                <div className="card login-form">
+                    <div className="card-body" id="form-login">
+                        <h3 className="card-title text-center">Sign in to use our services!</h3>
+                        <div className="card-text">
+                            <form onSubmit={this.onHandleSubmit}>
+                                <div className="form-group">
+                                    <label htmlFor="exampleInputEmail1">Email address</label>
+                                    <input type="text" value={this.state.username}  
+                                    onChange={this.handleEmailChange} name="username" 
+                                    className="form-control form-control-sm" id="exampleInputEmail1"
+                                     aria-describedby="emailHelp" />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="exampleInputPassword1">Password</label>
+                                    <a href="#" style={{ float: 'right', fontSize: '12px' }}>Forgot password?</a>
+                                    <input type="password" name="password" value={this.state.password} 
+                                    onChange={this.handlePasswordChange}className="form-control form-control-sm"
+                                    id="exampleInputPassword1" />
+                                </div>
+                                <input type="submit" value="Đăng nhập" className="btn btn-primary btn-block"></input>
+                                <div className="sign-up">
+                                    Don't have an account? <a href="#">Create One</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                {elmRegister}
             </div>
-        )
+        );
     }
 }
 export default LogIn

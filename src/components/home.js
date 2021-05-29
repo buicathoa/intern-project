@@ -4,7 +4,6 @@ import Flashsale from './Flashsale';
 import Footer from './Footer';
 import Products from './Products';
 import Sliderss from './Sliderss';
-import Tuychons from './Tuychons';
 class Home extends Component {
     render() {
         return (
@@ -13,7 +12,6 @@ class Home extends Component {
                 <Convenients/>
                 <Products/>
                 <Flashsale/>
-                <Tuychons/>
                 <Footer/>
             </div>
             )

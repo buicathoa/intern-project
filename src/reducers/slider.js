@@ -3,7 +3,7 @@ var images = [
     {
         slider: {
             id: 0,
-            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/thanh-toan-vnpay-br-giam-den-100k-1003516.jpg?v=1616384342',
+            image: 'https://marketplace.canva.com/EADakGvFucI/2/0/800w/canva-breathe-facebook-cover-Us8rhJAzWTU.jpg',
             selector: 0
         },
         index: 0
@@ -11,7 +11,7 @@ var images = [
     {
         slider: {
             id: 1,
-            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/ra-mat-samsung-a52-a72-1003541.webp?v=1616471822',
+            image: 'https://i0.wp.com/www.ultraupdates.com/wp-content/uploads/2016/11/dont-give-up-islamic-cover-photos.jpg?resize=708%2C262&ssl=1',
             selector: 1,
         },
         index: 1
@@ -19,7 +19,7 @@ var images = [
     {
         slider: {
             id: 2,
-            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/hotsale-note-20-series-br-chi-tu-15-249-000d-1001764.jpg?v=1616385242',
+            image: 'https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg',
             selector: 2
         },
         index: 2
@@ -27,7 +27,7 @@ var images = [
     {
         slider: {
             id: 3,
-            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/oppo-reno5-br-chi-con-7-379-000d-1003571.jpg?v=1616385482',
+            image: 'https://ekapak.com/wpz/wp-content/uploads/2018/07/sunset-beach-birds.jpeg',
             selector: 3
         },
         index: 3
@@ -35,7 +35,7 @@ var images = [
     {
         slider: {
             id: 4,
-            image: 'https://stcv4.hnammobile.com/uploads/optimized/banner/s21-series-chinh-hang-br-hnam-giam-30-1001765.jpg?v=1616385603',
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrjCsOwiAvHbaYPZS_XIQF874mWh4FW_A39g&usqp=CAU',
             selector: 4
         },
         index: 4
